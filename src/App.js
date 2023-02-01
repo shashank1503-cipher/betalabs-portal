@@ -9,32 +9,55 @@ import {
   Grid,
   theme,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
-
+import { Route, Routes } from 'react-router';
+import NotFound from './pages/NotFound';
+import Landing from './pages/Landing';
+import '@fontsource/roboto/400.css';
+import '@fontsource/poppins/700.css';
+import Main from './pages/Main';
+import PrivateRoute from './utils/PrivateRoute';
+import ProtectedRoute from './utils/ProtectedRoute';
+import Admin from './pages/Admin';
+import Event from './pages/Event';
+import CreateEvent from './pages/CreateEvent';
+import GetAllEvents from './pages/GetAllEvents';
+import Leaderboard from './pages/Leaderboard';
+import EditEvent from './pages/EditEvent';
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+    <ChakraProvider >
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/main" element={
+          <PrivateRoute>
+            <Main />
+          </PrivateRoute>} />
+        <Route path="/event/:id" element={
+          <PrivateRoute>
+            <Event />
+          </PrivateRoute>} />
+        <Route path="/leaderboard" element={
+          <PrivateRoute>
+            <Leaderboard />
+          </PrivateRoute>} />
+        <Route path="/admin" element={
+          <ProtectedRoute>
+            <Admin />
+          </ProtectedRoute>} />
+        <Route path="/admin/create" element={
+          <ProtectedRoute>
+            <CreateEvent />
+          </ProtectedRoute>} />
+        <Route path="/admin/listevents" element={
+          <ProtectedRoute>
+            <GetAllEvents />
+          </ProtectedRoute>} />
+          <Route path="/admin/event/:id" element={
+          <ProtectedRoute>
+            <EditEvent />
+          </ProtectedRoute>} />
+      </Routes>
     </ChakraProvider>
   );
 }
