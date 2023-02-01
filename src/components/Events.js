@@ -15,7 +15,7 @@ const Events = (props) => {
     const fetchEvents = async () => {
         setLoading(true)
         try {
-            let url = `http://127.0.0.1:8000/events?page=${page}&per_page=${perPage}&upcoming=${upcoming}`
+            let url = `https://betalabs-portal-backend-production.up.railway.app/events?page=${page}&per_page=${perPage}&upcoming=${upcoming}`
             const res = await fetch(url, {
                 method: 'GET',
                 headers: {

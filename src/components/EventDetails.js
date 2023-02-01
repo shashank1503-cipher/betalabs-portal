@@ -14,7 +14,7 @@ const EventDetails = ({ eventId }) => {
 
     let getEvent = async () => {
         setIsLoading(true)
-        let url = `http://127.0.0.1:8000/events/${eventId}`
+        let url = `https://betalabs-portal-backend-production.up.railway.app/events/${eventId}`
         try {
             let response = await fetch(url, {
                 method: 'GET',
@@ -48,7 +48,7 @@ const EventDetails = ({ eventId }) => {
 
     let markAttendance = async () => {
         setButtonLoading(true)
-        let url = `http://127.0.0.1:8000/events/${eventId}/submitattendance`
+        let url = `https://betalabs-portal-backend-production.up.railway.app/events/${eventId}/submitattendance`
         try {
             let response = await fetch(url, {
                 method: 'POST',

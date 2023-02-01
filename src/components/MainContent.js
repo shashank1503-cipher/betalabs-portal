@@ -9,7 +9,7 @@ const MainContent = () => {
   const [techSprint, setTechSprint] = useState('')
   let { token } = useAuth()
   let fetchTechSprint = async () => {
-    let url = "http://127.0.0.1:8000/techsprint"
+    let url = "https://betalabs-portal-backend-production.up.railway.app/techsprint"
     let res = await fetch(url, {
       method: "GET",
       headers: {

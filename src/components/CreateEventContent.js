@@ -116,7 +116,7 @@ const CreateEventContent = () => {
         };
         try {
             const res = await fetch(
-                'http://127.0.0.1:8000/admin/event',
+                'https://betalabs-portal-backend-production.up.railway.app/admin/event',
                 {
                     method: 'POST',
                     headers: {
@@ -561,7 +561,7 @@ const CreateEventContent = () => {
                         onClick={sendData}
                         isLoading={loading}
                     >
-                        Post Idea
+                        Post Event
                     </Button>
                     <Button variant={'solid'} disabled={loading} onClick={saveDraft}>
                         Save Draft

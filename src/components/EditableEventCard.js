@@ -39,7 +39,7 @@ export default function EditableEventCard(props) {
     const [loading, setLoading] = useState(false);
     let startAttendance = async () => {
         setLoading(true);
-        let url = `http://127.0.0.1:8000/admin/event/${id}/attendance`
+        let url = `https://betalabs-portal-backend-production.up.railway.app/admin/event/${id}/attendance`
         try {
             let response = await fetch(url, {
                 method: 'PUT',
@@ -87,7 +87,7 @@ export default function EditableEventCard(props) {
     }
     let stopAttendance = async () => {
         setLoading(true);
-        let url = `http://127.0.0.1:8000/admin/event/${id}/attendance`
+        let url = `https://betalabs-portal-backend-production.up.railway.app/admin/event/${id}/attendance`
         try {
             let response = await fetch(url, {
                 method: 'PUT',

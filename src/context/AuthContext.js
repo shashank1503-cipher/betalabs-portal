@@ -21,7 +21,7 @@ import React, {
     hd: 'iiitkottayam.ac.in',
   });
   
-  const URL = 'http://127.0.0.1:8000';
+  const URL = 'https://betalabs-portal-backend-production.up.railway.app';
   
   const AuthContext = createContext({});
   
