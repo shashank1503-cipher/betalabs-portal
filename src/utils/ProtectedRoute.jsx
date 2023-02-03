@@ -5,7 +5,7 @@ import useAuth from '../context/AuthContext';
 const ProtectedRoute = ({ children }) => {
     let { user } = useAuth();
     let userEmail = user.email;
-    return userEmail === "techclub@iiitkottayam.ac.in" ? children : user ? <Navigate to={'/main'} /> : <Navigate to={'/'} />;
+    return (userEmail === "techclub@iiitkottayam.ac.in" || userEmail === "ganesh21bcs104@iiitkottayam.ac.in")  ? children : user ? <Navigate to={'/main'} /> : <Navigate to={'/'} />;
 };
 
 export default ProtectedRoute;

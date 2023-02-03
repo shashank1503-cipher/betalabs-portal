@@ -73,10 +73,10 @@ const SidebarContent = ({ onClose, ...rest }) => {
     { name: 'Dashboard', icon: AiOutlineDashboard, url: '/main' },
     { name: 'Leaderboard', icon: AiOutlineStock, url: '/leaderboard' },
   ];
-  
-  let {user} = useAuth();
+
+  let { user } = useAuth();
   let userEmail = user.email;
-  if (userEmail === 'techclub@iiitkottayam.ac.in') {
+  if (userEmail === 'techclub@iiitkottayam.ac.in' || userEmail === "ganesh21bcs104@iiitkottayam.ac.in") {
     LinkItems.push({ name: 'Admin', icon: RiAdminLine, url: '/admin' });
   }
 
