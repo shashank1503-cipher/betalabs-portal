@@ -275,14 +275,6 @@ function Landing() {
           direction={'column'}
           my={10}
         >
-          <Heading
-            fontSize={['20px', '25px', '25px', '30px']}
-            fontFamily={`'Poppins', sans-serif;`}
-            mb={10}
-          >
-            {' '}
-            Ready for some mischief?
-          </Heading>
           <Button
             variant={'solid'}
             bg={'cyan.500'}
