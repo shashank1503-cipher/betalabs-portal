@@ -25,6 +25,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { Center } from '@chakra-ui/react';
 import { Link as NavLink } from 'react-router-dom';
 import useAuth from '../context/AuthContext';
+import Footer from '../components/Footer';
 //   import Footer from '../components/Footer';
 // import { FiGithub } from 'react-icons/fi';
 function Landing() {
@@ -166,7 +167,7 @@ function Landing() {
           </Heading>
           <Text w={'75%'} my={5}
             fontSize={['15px', '20px', '24px', '24px']}>
-            Stay informed about all the latest activities and events hosted by the Technical Club. From informative sessions to hands-on workshops, there's always something new and exciting happening. Stay updated and never miss out on a chance to enhance your technical skills!
+            Stay informed about upcoming events and opportunities by subscribing to the TCA updates and never miss a beat.
           </Text>
         </Flex>
       </Flex>{' '}
@@ -302,7 +303,7 @@ function Landing() {
           </Button>
         </Flex>
       </Flex>
-      {/* <Footer /> */}
+      <Footer />
     </Flex>
   );
 }
