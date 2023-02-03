@@ -166,7 +166,7 @@ function Landing() {
           </Heading>
           <Text w={'75%'} my={5}
             fontSize={['15px', '20px', '24px', '24px']}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            Stay informed about all the latest activities and events hosted by the Technical Club. From informative sessions to hands-on workshops, there's always something new and exciting happening. Stay updated and never miss out on a chance to enhance your technical skills!
           </Text>
         </Flex>
       </Flex>{' '}
@@ -200,7 +200,7 @@ function Landing() {
           </Heading>
           <Text w={'75%'} my={5}
             fontSize={['15px', '20px', '24px', '24px']}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            Join forces with your fellow tech enthusiasts to expand your knowledge and skills through engaging and educational Technical Club activities.
           </Text>
         </Flex>
       </Flex>
@@ -235,8 +235,7 @@ function Landing() {
           </Heading>
           <Text w={'75%'} my={5}
             fontSize={['15px', '20px', '24px', '24px']}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            Keep track of your progress and strive for excellence by viewing the updated leaderboard, showcasing the top participants in Technical Club activities.
           </Text>
         </Flex>
       </Flex>{' '}
