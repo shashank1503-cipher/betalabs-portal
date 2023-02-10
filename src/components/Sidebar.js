@@ -172,7 +172,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
       <Text
         display={{ base: 'none', md: 'flex' }}
         fontSize={['sm', 'md', 'md', 'md']}
-        fontFamily={`'Source Code Pro', sans-serif`}
+        fontFamily={`'Poppins',sans-serif`}
         color={useColorModeValue('cyan.600', 'cyan')}
         fontWeight="bold"
       >
